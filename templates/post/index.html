@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block body %}
+{% if post.image %}
+  <img src="{{ post.image.url }}" class="img-responsive">
+{% endif %}
+      {% for post in posts %}
+          {{post.id}}<br>
+          <a href="{{ post.get_absolute_url }}">{{post.title}} </a> <br>
+          {{post.content}}<br>
+          {{post.publishing_date}}<br>
+
+      {% endfor %}
+
+{% endblock %}

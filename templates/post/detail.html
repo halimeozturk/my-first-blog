@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+{% if post.image %}
+    <img src="{{ post.image.url }}" class="img-responsive">
+{% endif %}
+
+{% endblock %}
+
+
+    {{post.id}}<br>
+    {{post.title}} <br>
+    {{post.content}}<br>
+    {{post.publishing_date}}<br>
+
+
+</body>
+
+</html>
